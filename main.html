@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Serif:wght@400;500;700&display=swap"/>
+    <link rel="shortcut icon" href="./Images/favicon.svg" type="image/x-icon">
+    <title>Dnd project</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="container-fluid">
+                <div class="row justify-content-around" style="border-bottom: 2px solid var(--color-whitesmoke);">
+                    <div class="col-md-6">
+                        <i class="fa-solid fa-scroll"></i>
+                        <b class="header-label"> Dungeons & Dragons </b>
+                    </div>
+
+                    <div class="col-md-6">
+                        <button class="header-button-create" onclick="document.getElementById('character-form').submit()"> Create character code </button>
+                        <button class="header-button-exit" onClick="window.location.href='index.html'"> Exit </button>
+
+
+
+
+
+
+                    </div>
+                    <!--
+                    <div class="col-md-2" style="justify-content: center;">
+                        <button class="header-button-exit"> Exit </button>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container-fluid">
+                <div class="row" >
+                    <div class="col-lg-12">
+                        <form id="character-form">
+                            <h1>Your character</h1>
+                                <div class="row" > 
+                                    <!-- Основные характеристики персонажа -->
+                                    <div class="col-xl-6" id="Basic">
+                                        <label>
+                                            <input class="d-block" id="Name" type="text" placeholder="Name" style="width: auto;">
+                                            <input class="d-block" id="Race" type="text" placeholder="Race&subrace" style="width: auto;">
+                                            <input class="d-block" id="Class" type="text" placeholder="Class" style="width: auto;">
+                                            <input class="d-block" id="Subclass" type="text" placeholder="Subclass" style="width: auto;">
+                                            <input class="d-block" id="Level" type="text" placeholder="Level" style="width: auto;">
+                                            <div class="row">
+                                                <div class="col-xl-2"><i class="fa-solid fa-heart"></i></div>
+                                                <div class="col-xl-6"><input class="d-block" id="health" type="text" placeholder="Health" style="width: auto;"></i></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-2"><i class="fa-solid fa-shoe-prints"></i></div>
+                                                <div class="col-xl-6"><input class="d-block" id="speed" type="text" placeholder="Speed" style="width: auto;"></i></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-2"><i class="fa-solid fa-shield-halved"></i></div>
+                                                <div class="col-xl-6"><input class="d-block" id="armor" type="text" placeholder="Armor" style="width: auto;"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-2"><i class="fa-solid fa-dice-d20"></i></i></div>
+                                                <div class="col-xl-6"><input class="d-block" id="Initiative" type="text" placeholder="Initiative" style="width: auto;"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-2"><i class="fa-solid fa-brain"></i></div>
+                                                <div class="col-xl-6"><input class="d-block" id="Initiative" type="text" placeholder="Proficienty bonus" style="width: auto;"></div>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <!-- Вдохновение -->
+                                    <div class="col-xl-2 align-self-center">
+                                        <label class="material-checkbox">
+                                            <input type="checkbox">
+                                            <span class="checkmark"></span>
+                                            Inspiration
+                                          </label>
+                                    </div>
+
+
+                                    <!-- Характеристики -->
+                                    <div class="container-fluid"> 
+                                        <h1>Characteristics</h1>
+                                        <div class="row">
+                                            <div class="col-lg-10">
+                                                <label>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Athletics (Str):</i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Athletics" type="text"></div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Acrobatics (Dex):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Acrobatics" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Sleight of Hand (Dex):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Sleight of Hand" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Stealth (Dex):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Stealth" type="text"></div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Animal Handling (Wis):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Animal Handling" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Insight (Wis):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Insight" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Survival (Wis):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Survival" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Medicine (Wis):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Medicine" type="text"></div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Arcana (Int):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Arcana" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Nature (Int):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Nature" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>History (Int):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="History" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Religion (Int):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Religion" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Investigation (Int):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Investigation" type="text"></div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Deception (Cha):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Deception" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Intimidation (Cha):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Intimidation" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Performance (Cha):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Performance" type="text"></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xl-6"><i>Persuasion (Cha):  </i></div>
+                                                        <div class="col-xl-6"><input class="d-block" id="Persuasion" type="text"></div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Навыки -->
+
+
+                                    <div class="col-lg-5" id="Bio" >
+                                        <h1>Biography</h1>
+                                        <label>
+                                            <textarea rows="10" cols="50" wrap="soft" placeholder="Make up a story"></textarea>
+                                            <textarea rows="10" cols="50" wrap="soft" placeholder="You look like..."></textarea>
+                                            <textarea rows="10" cols="50" wrap="soft" placeholder="Your character's personality"></textarea>
+                                        </label>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--- <i class="fa-solid fa-trash"></i> мусорка -->
+
+
+        </main>
+    
+        <footer class="footer">footer
+
+        </footer>
+    </div>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="./js/submitCharacterForm.js"></script>
+
+</body>
+</html>
